@@ -44,36 +44,33 @@
 
 
 
-class Store_Item
+class StoreItem
+  attr_reader :item, :brand, :price
+  attr_writer :item, :brand, :price
+
   def initialize(item, brand, price)
     @item = item
     @brand = brand
     @price = price
   end
 
-  def print_info
-    p "#{item} by #{brand} is $#{price}"
-  end
+  # def print_info
+  #   p "#{item} by #{brand} is $#{price}"
+  # end
 
-  def item
-    @item
-  end  
-
-  def brand
-    @brand
-  end  
-
-  def price
-    @price
-  end
+  # def item=(item)
+  #   @item = item
+  # end  
 
 end
 
-item1 = Store_Item.new("guitar", "fender", 500)
+item1 = StoreItem.new("guitar", "fender", 500)
 # p item1.item
-item1.print_info
+item1.item = "bass"
+p item1.item
+p item1.price
 
 
-item2 = Store_Item.new("keyboard", "yamaha", 700)
-item2.print_info
+item2 = StoreItem.new("keyboard", "yamaha", 700)
+# item2.print_info
 
