@@ -71,9 +71,9 @@ end
 
 item1 = Store_Item.new("guitar", "fender", 500)
 # p item1.item
-p item1.print_info
+item1.print_info
 
 
 item2 = Store_Item.new("keyboard", "yamaha", 700)
-p item2.print_info
+item2.print_info
 
